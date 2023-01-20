@@ -1,6 +1,6 @@
 # MODULE OVERVIEW
 
-The module implements REST Resource exposing a REST endpoint for creating nodes of the type "article" with multiple referenced Paragraphs.
+The module implements a REST Resource exposing a REST endpoint for creating nodes of the type "article" with multiple referenced Paragraphs of different types.
 
 Authentication is done with BasicAuth and has the module "HTTP Basic Auth" as a dependancy.
 
