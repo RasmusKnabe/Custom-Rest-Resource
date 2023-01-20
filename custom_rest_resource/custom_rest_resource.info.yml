@@ -1,0 +1,9 @@
+name: Custom REST Resource
+description: Define's a custom REST Resource
+package: Custom
+type: module
+
+core_version_requirement: ^8.8 || ^9
+
+dependencies:
+  - drupal:basic_auth
