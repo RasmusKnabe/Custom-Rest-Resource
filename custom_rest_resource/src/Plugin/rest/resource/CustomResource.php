@@ -51,7 +51,6 @@ class CustomResource extends ResourceBase {
 	
 	$node->save();
 	$nid = $node->id();
-	 //$response = ['message' => 'A new article node has been create. ID:' . $nid];
     return new ResourceResponse($node);
     
     
@@ -63,13 +62,7 @@ class CustomResource extends ResourceBase {
 
 function paragraphImage($data) {
     
-/*
-	    $image_source_path = $data['url'];
-		$image_target_path = 'public://' . $data['name'];
-		$image_data = file_get_contents ($image_source_path);
-		$image_alt = $data['alt_text'];
-		$image_object = \Drupal::service('file.repository')->writeData($image_data, $image_target_path);
-*/
+
 		$image_data = file_get_contents($data['url']);
 		$file_repository = \Drupal::service('file.repository');
 		$image = $file_repository->writeData($image_data, "public://" . $data['name'], FileSystemInterface::EXISTS_REPLACE);
